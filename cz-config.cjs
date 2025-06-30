@@ -2,6 +2,10 @@
  * @see  https://github.com/leoforfree/cz-
  * commitizen git commit 命令行工具 , 插件  cz-customizable 用于 定义 git  commit 内容格式
  */
+'use strict'; /**
+ * @see  https://github.com/leoforfree/cz-
+ * commitizen git commit 命令行工具 , 插件  cz-customizable 用于 定义 git  commit 内容格式
+ */
 module.exports = {
   types: [
     { value: 'wip', name: '🚧 wip: 工作进行中' },
@@ -21,7 +25,10 @@ module.exports = {
       value: 'ci',
       name: '🎡 ci: 更改持续集成软件的配置文件和package中的scripts命令 例如scopes: Travis, Circle等',
     },
-    { value: 'chore', name: '🗯  chore: 变更构建流程或辅助工具,往往是一些琐碎的更新' },
+    {
+      value: 'chore',
+      name: '🗯  chore: 变更构建流程或辅助工具,往往是一些琐碎的更新',
+    },
     { value: 'revert', name: '⏪ revert: 代码回退' },
     { value: 'docs', name: '📚 docs: 文档变更' },
     { value: 'test', name: '🏁 test: 测试' },
@@ -39,7 +46,7 @@ module.exports = {
   // allowTicketNumber: false,
   isTicketNumberRequired: false,
   ticketNumberPrefix: 'TICKET-',
-  ticketNumberRegExp: '\d{1,5}',
+  ticketNumberRegExp: 'd{1,5}',
 
   // override the messages, defaults are as follows
   messages: {

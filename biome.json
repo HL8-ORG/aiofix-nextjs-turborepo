@@ -17,7 +17,8 @@
   "linter": {
     "rules": {
       "style": {
-        "noNonNullAssertion": "off"
+        "noNonNullAssertion": "off",
+        "useSelfClosingElements": "info"
       },
       "suspicious": {
         "noConsoleLog": "off",
@@ -27,6 +28,9 @@
       "a11y": {
         "noSvgWithoutTitle": "off",
         "useValidAnchor": "off"
+      },
+      "nursery": {
+        "useSortedClasses": "off"
       }
     }
   }

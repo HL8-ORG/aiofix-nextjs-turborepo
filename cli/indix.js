@@ -1,15 +1,15 @@
+import { setTimeout as sleep } from 'node:timers/promises';
 // Run `npm start` to start the demo
 import {
-  intro,
-  outro,
+  cancel,
   confirm,
+  intro,
+  isCancel,
+  outro,
   select,
   spinner,
-  isCancel,
-  cancel,
   text,
 } from '@clack/prompts';
-import { setTimeout as sleep } from 'node:timers/promises';
 import color from 'picocolors';
 
 async function main() {
