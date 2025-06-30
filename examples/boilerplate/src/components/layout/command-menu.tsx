@@ -22,7 +22,9 @@ import {
   titleCaseToCamelCase,
 } from '@/lib/utils';
 
+import { DynamicIcon } from '@/components/dynamic-icon';
 import { Keyboard } from '@/components/keyboard';
+import { ScrollArea } from '@repo/design-system/components/scroll-area';
 import { Badge } from '@repo/design-system/components/shadcn-ui/badge';
 import { Button } from '@repo/design-system/components/shadcn-ui/button';
 import {
@@ -39,8 +41,6 @@ import {
   CommandList,
 } from '@repo/design-system/components/shadcn-ui/command';
 import { DialogTitle } from '@repo/design-system/components/shadcn-ui/dialog';
-import { ScrollArea } from '@repo/design-system/components/shadcn-ui/scroll-area';
-import { DynamicIcon } from '@/components/dynamic-icon';
 
 interface CommandMenuProps extends DialogProps {
   dictionary: DictionaryType;

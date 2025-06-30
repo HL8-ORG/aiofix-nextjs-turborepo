@@ -1,18 +1,18 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
-import Image from 'next/image';
-import { useDropzone } from 'react-dropzone';
 import { Loader2, UploadCloud, X } from 'lucide-react';
+import Image from 'next/image';
+import { useCallback, useEffect, useState } from 'react';
+import { useDropzone } from 'react-dropzone';
 
 import type { FileType } from '@/types';
 import type { DropzoneOptions } from 'react-dropzone';
 
 import { cn, formatFileSize, wait } from '@/lib/utils';
 
-import { Button } from '@repo/design-system/components/shadcn-ui/button';
 import { FileThumbnail } from '@/components/file-thumbnail';
-import { ScrollArea } from '@repo/design-system/components/shadcn-ui/scroll-area';
+import { Button } from '@repo/design-system/components/shadcn-ui/button';
+import { ScrollArea } from '@repo/design-system/components/scroll-area';
 
 export interface FileDropzoneProps extends Partial<DropzoneOptions> {
   className?: string;

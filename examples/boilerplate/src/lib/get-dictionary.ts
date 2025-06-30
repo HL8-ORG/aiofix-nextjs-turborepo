@@ -1,6 +1,7 @@
 // More info: https://nextjs.org/docs/app/building-your-application/routing/internationalization#localization
-import type { LocaleType } from '@/types';
 import 'server-only';
+
+import type { LocaleType } from '@/types';
 
 /**
  * 字典文件映射对象

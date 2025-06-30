@@ -22,8 +22,8 @@ import { radii, themes } from '@/configs/themes';
 import { relocalizePathname } from '@/lib/i18n';
 
 import { useSettings } from '@/hooks/use-settings';
+import { ScrollArea } from '@repo/design-system/components/scroll-area';
 import { Button } from '@repo/design-system/components/shadcn-ui/button';
-import { ScrollArea } from '@repo/design-system/components/shadcn-ui/scroll-area';
 import {
   Sheet,
   SheetContent,

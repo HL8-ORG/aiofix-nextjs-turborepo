@@ -12,7 +12,10 @@ import { labelsData } from '../../_data/labels';
 import { KanbanTaskSchema } from '../../_schemas/kanban-task-schema';
 
 import { ButtonLoading } from '@repo/design-system/components/button';
+import { DatePicker } from '@/components/date-picker';
 import { FileDropzone } from '@/components/file-dropzone';
+import { InputTagsWithSuggestions } from '@/components/input-tags';
+import { ScrollArea } from '@repo/design-system/components/scroll-area';
 import {
   Form,
   FormControl,
@@ -22,7 +25,6 @@ import {
   FormMessage,
 } from '@repo/design-system/components/shadcn-ui/form';
 import { Input } from '@repo/design-system/components/shadcn-ui/input';
-import { ScrollArea } from '@repo/design-system/components/shadcn-ui/scroll-area';
 import {
   Select,
   SelectContent,
@@ -39,8 +41,6 @@ import {
 } from '@repo/design-system/components/shadcn-ui/sheet';
 import { Textarea } from '@repo/design-system/components/shadcn-ui/textarea';
 import { useKanbanContext } from '../../_hooks/use-kanban-context';
-import { InputTagsWithSuggestions } from '@/components/input-tags';
-import { DatePicker } from '@/components/date-picker';
 /**
  * 看板任务表单的默认值
  */

@@ -4,9 +4,9 @@ import { MessageCircleMore, Paperclip } from 'lucide-react';
 
 import type { TaskType } from '../types';
 
+import { AvatarStack } from '@/components/avatar';
 import { Button } from '@repo/design-system/components/shadcn-ui/button';
 import { CardFooter } from '@repo/design-system/components/shadcn-ui/card';
-import { AvatarStack } from '@/components/avatar';
 
 interface KanbanTaskItemFooterProps {
   task: TaskType;
@@ -20,7 +20,7 @@ export function KanbanTaskItemFooter({ task }: KanbanTaskItemFooterProps) {
   }));
 
   return (
-    <CardFooter className="justify-between gap-2 pe-3 ps-5">
+    <CardFooter className="justify-between gap-2 ps-5 pe-3">
       <AvatarStack avatars={avatars} limit={3} size="sm" />
       <div className="flex items-center">
         <Button variant="ghost" size="sm">

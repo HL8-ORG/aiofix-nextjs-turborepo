@@ -7,6 +7,7 @@ import type { ComponentProps, KeyboardEvent } from 'react';
 
 import { cn } from '@/lib/utils';
 
+import { ScrollArea } from '@repo/design-system/components/scroll-area';
 import { Button } from '@repo/design-system/components/shadcn-ui/button';
 import {
   Command,
@@ -19,7 +20,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@repo/design-system/components/shadcn-ui/popover';
-import { ScrollArea } from '@repo/design-system/components/shadcn-ui/scroll-area';
 
 export interface InputTagsProps extends ComponentProps<'input'> {
   placeholder?: string;

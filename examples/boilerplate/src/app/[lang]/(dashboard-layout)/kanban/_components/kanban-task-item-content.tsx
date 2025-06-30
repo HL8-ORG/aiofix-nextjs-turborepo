@@ -2,12 +2,12 @@
 
 import type { TaskType } from '../types';
 
+import { MediaGrid } from '@/components/media-grid';
 import {
   CardContent,
   CardDescription,
   CardTitle,
 } from '@repo/design-system/components/shadcn-ui/card';
-import { MediaGrid } from '@/components/media-grid';
 
 interface KanbanTaskItemContentProps {
   task: TaskType;

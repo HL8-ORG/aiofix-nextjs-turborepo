@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Fragment } from 'react';
 
+import type { DictionaryType } from '@/lib/get-dictionary';
 import type { NavigationNestedItem, NavigationRootItem } from '@/types';
 
 import { navigationsData } from '@/data/navigations';
@@ -47,7 +48,11 @@ import {
  *   - 菜单项使用flex布局和gap控制间距
  *   - 支持最大高度限制和滚动
  */
-export function TopBarHeaderMenubar() {
+export function TopBarHeaderMenubar({
+  dictionary,
+}: {
+  dictionary: DictionaryType;
+}) {
   const pathname = usePathname();
 
   const renderMenuItem = (item: NavigationRootItem | NavigationNestedItem) => {

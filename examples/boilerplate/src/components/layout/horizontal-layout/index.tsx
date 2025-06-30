@@ -29,7 +29,7 @@ import { HorizontalLayoutHeader } from './horizontal-layout-header';
  *
  * @param {Object} props - 组件属性
  * @param {ReactNode} props.children - 子组件内容
- * @param {DictionaryType} props.dictionary - 字典数据
+ * @param {DictionaryType} props.dictionary - 国际化字典
  */
 export function HorizontalLayout({
   children,

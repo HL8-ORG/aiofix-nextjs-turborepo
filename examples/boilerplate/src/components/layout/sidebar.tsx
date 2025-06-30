@@ -24,13 +24,13 @@ import {
 
 import { DynamicIcon } from '@/components/dynamic-icon';
 import { useSettings } from '@/hooks/use-settings';
+import { ScrollArea } from '@repo/design-system/components/scroll-area';
 import { Badge } from '@repo/design-system/components/shadcn-ui/badge';
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@repo/design-system/components/shadcn-ui/collapsible';
-import { ScrollArea } from '@repo/design-system/components/shadcn-ui/scroll-area';
 import {
   SidebarContent,
   SidebarGroup,

@@ -12,6 +12,8 @@ import { i18n } from '@/configs/i18n';
 import { relocalizePathname } from '@/lib/i18n';
 import { getDictionaryValue } from '@/lib/utils';
 
+import { useSettings } from '@/hooks/use-settings';
+import { Button } from '@repo/design-system/components/shadcn-ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,8 +23,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@repo/design-system/components/shadcn-ui/dropdown-menu';
-import { Button } from '@repo/design-system/components/shadcn-ui/button';
-import { useSettings } from '@/hooks/use-settings';
 
 export function LanguageDropdown({
   dictionary,

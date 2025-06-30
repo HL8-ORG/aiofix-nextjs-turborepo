@@ -1,11 +1,10 @@
 'use client';
 
-import { useState } from 'react';
 import { EllipsisVertical } from 'lucide-react';
+import { useState } from 'react';
 
 import type { ColumnType } from '../types';
 
-import { useKanbanContext } from '../_hooks/use-kanban-context';
 import { Button } from '@repo/design-system/components/shadcn-ui/button';
 import {
   DropdownMenu,
@@ -15,6 +14,7 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from '@repo/design-system/components/shadcn-ui/dropdown-menu';
+import { useKanbanContext } from '../_hooks/use-kanban-context';
 
 interface KanbanColumnActionsProps {
   column: ColumnType;

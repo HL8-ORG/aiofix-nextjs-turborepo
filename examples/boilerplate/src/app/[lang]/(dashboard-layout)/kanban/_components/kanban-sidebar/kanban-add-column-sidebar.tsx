@@ -11,6 +11,7 @@ import { KanbanColumnSchema } from '../../_schemas/kanban-column-schema';
 
 // TODO:这个button需要移植
 import { ButtonLoading } from '@repo/design-system/components/button';
+import { ScrollArea } from '@repo/design-system/components/scroll-area';
 import {
   Form,
   FormControl,
@@ -20,7 +21,6 @@ import {
   FormMessage,
 } from '@repo/design-system/components/shadcn-ui/form';
 import { Input } from '@repo/design-system/components/shadcn-ui/input';
-import { ScrollArea } from '@repo/design-system/components/shadcn-ui/scroll-area';
 import {
   Sheet,
   SheetContent,

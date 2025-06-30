@@ -1,10 +1,13 @@
 'use client';
 
 import { MoonStar, Sun, SunMoon } from 'lucide-react';
+import { useParams } from 'next/navigation';
 import { useCallback } from 'react';
 
 import type { DictionaryType } from '@/lib/get-dictionary';
-import type { ModeType } from '@/types';
+import type { LocaleType, ModeType } from '@/types';
+
+import { i18n } from '@/configs/i18n';
 
 import { useSettings } from '@/hooks/use-settings';
 import { Button } from '@repo/design-system/components/shadcn-ui/button';
@@ -26,7 +29,10 @@ const modeIcons = {
 
 export function ModeDropdown({ dictionary }: { dictionary: DictionaryType }) {
   const { settings, updateSettings } = useSettings();
+  const params = useParams();
 
+  const locale = params.lang as LocaleType;
+  const direction = i18n.localeDirection[locale];
   const mode = settings.mode;
   const ModeIcon = modeIcons[mode];
 
@@ -38,13 +44,9 @@ export function ModeDropdown({ dictionary }: { dictionary: DictionaryType }) {
   );
 
   return (
-    <DropdownMenu>
+    <DropdownMenu dir={direction}>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          size="icon"
-          aria-label={dictionary.navigation.mode.mode}
-        >
+        <Button variant="ghost" size="icon" aria-label="Mode">
           <ModeIcon className="size-4" />
         </Button>
       </DropdownMenuTrigger>

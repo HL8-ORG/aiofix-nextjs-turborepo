@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { fonts } from '@repo/design-system/lib/fonts';
 
 import '../globals.css';
 
@@ -12,16 +13,18 @@ export default function RootLayout(props: { children: ReactNode }) {
   const { children } = props;
 
   return (
-    <div
-      className={cn(
-        '[&:lang(ar)]:font-cairo [&:lang(en)]:font-lato', // Set font styles based on the language
-        'overscroll-none bg-background text-foreground antialiased' // Set background, text, , anti-aliasing styles, and overscroll behavior
-      )}
-    >
-      <Providers locale="en">
-        {children}
-        <Toaster />
-      </Providers>
-    </div>
+    <html lang="en" className={fonts} dir="ltr" suppressHydrationWarning>
+      <body
+        className={cn(
+          '[&:lang(ar)]:font-cairo [&:lang(en)]:font-lato', // Set font styles based on the language
+          'overscroll-none bg-background text-foreground antialiased' // Set background, text, , anti-aliasing styles, and overscroll behavior
+        )}
+      >
+        <Providers locale="en">
+          {children}
+          <Toaster />
+        </Providers>
+      </body>
+    </html>
   );
 }

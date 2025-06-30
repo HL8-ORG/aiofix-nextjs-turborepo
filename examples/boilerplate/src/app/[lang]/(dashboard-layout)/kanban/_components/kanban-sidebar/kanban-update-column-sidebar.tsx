@@ -1,16 +1,16 @@
 'use client';
 
-import { useEffect } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
 import { Grid2x2Plus } from 'lucide-react';
+import { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
 
 import type { KanbanColumnFormType } from '../../types';
 
 import { KanbanColumnSchema } from '../../_schemas/kanban-column-schema';
 
-import { useKanbanContext } from '../../_hooks/use-kanban-context';
 import { ButtonLoading } from '@repo/design-system/components/button';
+import { ScrollArea } from '@repo/design-system/components/scroll-area';
 import {
   Form,
   FormControl,
@@ -20,7 +20,6 @@ import {
   FormMessage,
 } from '@repo/design-system/components/shadcn-ui/form';
 import { Input } from '@repo/design-system/components/shadcn-ui/input';
-import { ScrollArea } from '@repo/design-system/components/shadcn-ui/scroll-area';
 import {
   Sheet,
   SheetContent,
@@ -28,6 +27,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from '@repo/design-system/components/shadcn-ui/sheet';
+import { useKanbanContext } from '../../_hooks/use-kanban-context';
 
 const defaultValues = {
   title: '',

@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import type {
   ToastActionElement,
   ToastProps,
-} from '@repo/design-system/components/toast';
+} from '@repo/design-system/components/shadcn-ui/toast';
 import type { ReactNode } from 'react';
 
 /** 最大允许显示的 Toast 数量 */

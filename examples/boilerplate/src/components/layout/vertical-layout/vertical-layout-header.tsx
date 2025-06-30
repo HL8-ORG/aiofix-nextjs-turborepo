@@ -7,9 +7,9 @@ import type { LocaleType } from '@/types';
 
 import { LanguageDropdown } from '@/components/language-dropdown';
 import { FullscreenToggle } from '@/components/layout/full-screen-toggle';
-import { ModeDropdown } from '@/components/layout/mode-dropdown';
 import { NotificationDropdown } from '@/components/layout/notification-dropdown';
 import { UserDropdown } from '@/components/layout/user-dropdown';
+import { ModeDropdown } from '@/components/mode-dropdown';
 import { SidebarTrigger } from '@repo/design-system/components/shadcn-ui/sidebar';
 import { ToggleMobileSidebar } from '../toggle-mobile-sidebar';
 

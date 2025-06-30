@@ -9,8 +9,8 @@ import type { LocaleType } from '@/types';
 
 import { FullscreenToggle } from '@/components/layout/full-screen-toggle';
 import { ModeDropdown } from '@/components/layout/mode-dropdown';
-import { ToggleMobileSidebar } from '@/components/layout/toggle-mobile-sidebar';
 import { UserDropdown } from '@/components/layout/user-dropdown';
+import { ToggleMobileSidebar } from '../toggle-mobile-sidebar';
 
 /**
  * 底部导航栏头部组件
@@ -33,7 +33,9 @@ import { UserDropdown } from '@/components/layout/user-dropdown';
  */
 export function BottomBarHeader({
   dictionary,
-}: { dictionary: DictionaryType }) {
+}: {
+  dictionary: DictionaryType;
+}) {
   const params = useParams();
   const locale = params.lang as LocaleType;
 

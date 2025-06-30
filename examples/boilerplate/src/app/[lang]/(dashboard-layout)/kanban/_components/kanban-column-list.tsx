@@ -4,8 +4,8 @@ import { Droppable } from '@hello-pangea/dnd';
 
 import type { DroppableProvided } from '@hello-pangea/dnd';
 
+import { ScrollArea } from '@repo/design-system/components/scroll-area';
 import { useKanbanContext } from '../_hooks/use-kanban-context';
-import { ScrollArea } from '@repo/design-system/components/shadcn-ui/scroll-area';
 import { KanbanAddNewColumnButton } from './kanban-add-new-column-button';
 import { KanbanColumnItem } from './kanban-column-item';
 
@@ -14,7 +14,7 @@ export function KanbanColumnList() {
 
   return (
     // 水平滚动区域
-    <ScrollArea className="container w-0 flex-1 p-0">
+    <ScrollArea orientation="horizontal" className="container w-0 flex-1 p-0">
       <Droppable
         droppableId="root" // 可放置区域的唯一标识符,用于追踪拖放事件
         type="Column" // 指定此可放置区域接受的可拖动项类型,用于区分列和任务的移动

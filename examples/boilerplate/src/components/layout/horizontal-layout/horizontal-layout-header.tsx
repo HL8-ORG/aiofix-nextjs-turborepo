@@ -27,10 +27,12 @@ import { TopBarHeader } from './top-bar-header';
  */
 export function HorizontalLayoutHeader({
   dictionary,
-}: { dictionary: DictionaryType }) {
+}: {
+  dictionary: DictionaryType;
+}) {
   return (
     <header className="sticky top-0 z-50 w-full border-sidebar-border border-b bg-background">
-      <TopBarHeader />
+      <TopBarHeader dictionary={dictionary} />
       <Separator className="hidden h-[0.5px] bg-sidebar-border md:block" />
       <BottomBarHeader dictionary={dictionary} />
     </header>

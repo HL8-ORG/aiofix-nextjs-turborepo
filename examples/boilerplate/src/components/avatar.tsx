@@ -1,8 +1,8 @@
 'use client';
 
-import Link from 'next/link';
 import * as AvatarPrimitive from '@radix-ui/react-avatar';
 import { cva } from 'class-variance-authority';
+import Link from 'next/link';
 
 import type { VariantProps } from 'class-variance-authority';
 import type { ComponentProps, MouseEvent } from 'react';

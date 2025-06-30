@@ -2,13 +2,13 @@ import type { i18n } from '@/configs/i18n';
 import type { LucideIcon, icons } from 'lucide-react';
 import type { ComponentType, SVGAttributes } from 'react';
 import type { z } from 'zod';
-import type { ComingSoonSchema } from '@/schemas/coming-soon-schema';
-import type { RegisterSchema } from '@/schemas/register-schema';
-import type { SignInSchema } from '@/schemas/sign-in-schema';
-import type { VerifyEmailSchema } from '@/schemas/verify-email-schema';
-import type { radii, themes } from '@/configs/themes';
-import type { ForgotPasswordSchema } from '@/schemas/forgot-passward-schema';
-import type { NewPasswordSchema } from '@/schemas/new-passward-schema';
+import type { radii, themes } from './configs/themes';
+import type { ComingSoonSchema } from './schemas/coming-soon-schema';
+import type { ForgotPasswordSchema } from './schemas/forgot-passward-schema';
+import type { NewPasswordSchema } from './schemas/new-passward-schema';
+import type { RegisterSchema } from './schemas/register-schema';
+import type { SignInSchema } from './schemas/sign-in-schema';
+import type { VerifyEmailSchema } from './schemas/verify-email-schema';
 
 export type LayoutType = 'vertical' | 'horizontal';
 

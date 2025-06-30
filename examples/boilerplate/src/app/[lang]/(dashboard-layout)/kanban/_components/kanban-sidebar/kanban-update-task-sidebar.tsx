@@ -1,9 +1,9 @@
 'use client';
 
-import { useEffect } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
 import { Grid2x2Plus } from 'lucide-react';
+import { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
 
 import type { KanbanTaskFormType } from '../../types';
 
@@ -11,8 +11,11 @@ import { labelsData } from '../../_data/labels';
 
 import { KanbanTaskSchema } from '../../_schemas/kanban-task-schema';
 
-import { useKanbanContext } from '../../_hooks/use-kanban-context';
-
+import { ButtonLoading } from '@repo/design-system/components/button';
+import { DatePicker } from '@/components/date-picker';
+import { FileDropzone } from '@/components/file-dropzone';
+import { InputTagsWithSuggestions } from '@/components/input-tags';
+import { ScrollArea } from '@repo/design-system/components/scroll-area';
 import {
   Form,
   FormControl,
@@ -22,7 +25,6 @@ import {
   FormMessage,
 } from '@repo/design-system/components/shadcn-ui/form';
 import { Input } from '@repo/design-system/components/shadcn-ui/input';
-import { ScrollArea } from '@repo/design-system/components/shadcn-ui/scroll-area';
 import {
   Select,
   SelectContent,
@@ -38,10 +40,7 @@ import {
   SheetTitle,
 } from '@repo/design-system/components/shadcn-ui/sheet';
 import { Textarea } from '@repo/design-system/components/shadcn-ui/textarea';
-import { ButtonLoading } from '@repo/design-system/components/button';
-import { DatePicker } from '@/components/date-picker';
-import { FileDropzone } from '@/components/file-dropzone';
-import { InputTagsWithSuggestions } from '@/components/input-tags';
+import { useKanbanContext } from '../../_hooks/use-kanban-context';
 
 const defaultValues = {
   title: '',

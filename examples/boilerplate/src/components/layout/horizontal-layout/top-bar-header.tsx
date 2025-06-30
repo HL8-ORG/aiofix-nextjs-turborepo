@@ -1,5 +1,7 @@
 'use client';
 
+import type { DictionaryType } from '@/lib/get-dictionary';
+
 import { CommandMenu } from '@/components/layout/command-menu';
 import { TopBarHeaderMenubar } from './top-bar-header-menubar';
 
@@ -22,11 +24,15 @@ import { TopBarHeaderMenubar } from './top-bar-header-menubar';
  *   - TopBarHeaderMenubar: 实现主导航菜单
  *   - CommandMenu: 实现命令菜单,高度固定为8单位
  */
-export function TopBarHeader() {
+export function TopBarHeader({
+  dictionary,
+}: {
+  dictionary: DictionaryType;
+}) {
   return (
     <div className="container hidden items-center justify-between py-1 lg:flex">
-      <TopBarHeaderMenubar />
-      <CommandMenu buttonClassName="h-8" />
+      <TopBarHeaderMenubar dictionary={dictionary} />
+      <CommandMenu dictionary={dictionary} buttonClassName="h-8" />
     </div>
   );
 }
