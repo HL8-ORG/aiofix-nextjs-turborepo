@@ -51,6 +51,7 @@ function redirect(pathname: string, request: NextRequest) {
 export async function middleware(request: NextRequest) {
   // 获取当前URL的路径
   const { pathname } = request.nextUrl;
+
   // 获取当前URL中的语言标识
   const locale = getLocaleFromPathname(pathname);
   // 移除路径中的语言标识前缀

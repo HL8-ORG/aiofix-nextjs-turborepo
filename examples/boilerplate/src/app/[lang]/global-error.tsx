@@ -1,6 +1,6 @@
 'use client';
 
-import { AlertTriangle, RefreshCw } from 'lucide-react';
+import { AlertTriangle, LoaderCircle, RefreshCw } from 'lucide-react';
 import { useEffect } from 'react';
 
 import { useDictionary } from '@/hooks/use-dictionary';
@@ -11,14 +11,6 @@ import {
   AlertTitle,
 } from '@repo/design-system/components/shadcn-ui/alert';
 import { Button } from '@repo/design-system/components/shadcn-ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@repo/design-system/components/shadcn-ui/card';
 
 /**
  * 全局错误处理组件
@@ -33,7 +25,7 @@ import {
  *    - 通过reset函数提供重试机制
  *
  * 2. 界面展示:
- *    - 使用Card组件作为错误信息的容器
+ *    - 使用div组件作为错误信息的容器
  *    - 采用居中布局确保错误信息在页面正中显示
  *    - 通过Alert组件突出显示具体错误信息
  *
@@ -66,24 +58,22 @@ export default function GlobalError({
   // 如果字典还在加载中，显示加载状态
   if (!dictionary) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-gray-50 p-4">
-        <div className="text-center">Loading...</div>
+      <div className="flex min-h-screen w-full items-center justify-center bg-background p-4">
+        <LoaderCircle className="h-8 w-8 animate-spin text-muted-foreground" />
       </div>
     );
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-50 p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle className="text-center font-bold text-2xl text-red-600">
-            {dictionary.errors.globalError.title}
-          </CardTitle>
-          <CardDescription className="text-center">
-            {dictionary.errors.globalError.description}
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
+    <div className="flex min-h-screen w-full items-center justify-center bg-background p-4">
+      <div className="w-full max-w-2xl text-center">
+        <h1 className="text-4xl font-black text-red-600 md:text-6xl">
+          {dictionary.errors.globalError.title}
+        </h1>
+        <p className="mt-2 text-lg text-muted-foreground">
+          {dictionary.errors.globalError.description}
+        </p>
+        <div className="mt-6">
           <Alert variant="destructive">
             <AlertTriangle className="h-4 w-4" />
             <AlertTitle>{dictionary.errors.globalError.errorTitle}</AlertTitle>
@@ -91,14 +81,14 @@ export default function GlobalError({
               {error.message || dictionary.errors.globalError.defaultMessage}
             </AlertDescription>
           </Alert>
-        </CardContent>
-        <CardFooter className="flex justify-center">
-          <Button onClick={reset} variant="outline">
-            <RefreshCw className="mr-2 h-4 w-4" />{' '}
+        </div>
+        <div className="mt-8">
+          <Button onClick={reset} variant="outline" size="lg">
+            <RefreshCw className="mr-2 h-4 w-4" />
             {dictionary.errors.globalError.tryAgain}
           </Button>
-        </CardFooter>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 }
