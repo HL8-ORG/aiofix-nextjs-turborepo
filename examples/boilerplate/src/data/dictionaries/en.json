@@ -162,5 +162,39 @@
     "search": "Search...",
     "noResults": "No results found.",
     "typeCommand": "Type a command or search..."
+  },
+  "errors": {
+    "globalError": {
+      "title": "Oops! Something went wrong",
+      "description": "We apologize for the inconvenience",
+      "errorTitle": "Error",
+      "defaultMessage": "An unexpected error occurred. Please try again later.",
+      "tryAgain": "Try again"
+    },
+    "notFound": {
+      "title": "404",
+      "subtitle": "Page Not Found",
+      "description": "We couldn't find the page you're looking for. It might have been moved or doesn't exist.",
+      "homePage": "Home Page"
+    }
+  },
+  "kanban": {
+    "accessibility": {
+      "moveColumn": "Move column",
+      "moveTask": "Move task",
+      "addTask": "Add task",
+      "editTask": "Edit task",
+      "deleteTask": "Delete task",
+      "addColumn": "Add column",
+      "editColumn": "Edit column",
+      "deleteColumn": "Delete column"
+    }
+  },
+  "footer": {
+    "designedBy": "Designed & Developed by",
+    "appName": "Shadboard"
+  },
+  "landing": {
+    "ctaButton": "Start Now"
   }
 }

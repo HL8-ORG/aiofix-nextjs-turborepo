@@ -5,6 +5,8 @@ import { GripVertical } from 'lucide-react';
 import type { DraggableProvided } from '@hello-pangea/dnd';
 import type { ColumnType } from '../types';
 
+import { useDictionary } from '@/hooks/use-dictionary';
+
 import { cn } from '@/lib/utils';
 
 import { buttonVariants } from '@repo/design-system/components/shadcn-ui/button';
@@ -47,11 +49,17 @@ interface KanbanColumnItemHeaderProps {
  * 3. 样式处理
  *   - 使用 Tailwind 工具类控制布局和间距
  *   - 通过 cn 工具函数组合按钮样式
+ *
+ * 4. 国际化支持
+ *   - 使用 useDictionary hook 获取字典数据
+ *   - 根据当前语言显示相应的无障碍标签
  */
 export function KanbanColumnItemHeader({
   column,
   provided,
 }: KanbanColumnItemHeaderProps) {
+  const dictionary = useDictionary();
+
   return (
     <CardHeader className="flex flex-row items-center gap-x-1.5 space-y-0 p-0">
       <div
@@ -67,7 +75,9 @@ export function KanbanColumnItemHeader({
         // TODO: 展开拖拽库提供的拖拽手柄属性，包括事件处理器等，下一步需要添加是否可以拖拽的判断
         {...provided.dragHandleProps}
         // 无障碍标签，为屏幕阅读器提供可读的标签
-        aria-label="Move task"
+        aria-label={
+          dictionary?.kanban?.accessibility?.moveColumn || 'Move column'
+        }
       >
         <GripVertical className="size-4" />
       </div>

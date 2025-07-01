@@ -1,5 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { useDictionary } from '@/hooks/use-dictionary';
 
 import { Button } from '@repo/design-system/components/shadcn-ui/button';
 
@@ -29,8 +33,23 @@ import { Button } from '@repo/design-system/components/shadcn-ui/button';
  * 4. 交互功能:
  *   - 底部提供返回首页的按钮链接
  *   - 按钮使用大尺寸(size="lg")样式
+ *
+ * 5. 国际化支持:
+ *   - 使用useDictionary hook获取字典数据
+ *   - 根据当前语言显示相应的404页面信息
  */
 export function NotFound404() {
+  const dictionary = useDictionary();
+
+  // 如果字典还在加载中，显示加载状态
+  if (!dictionary) {
+    return (
+      <div className="flex min-h-screen w-full flex-col items-center justify-center gap-y-6 bg-background p-4 text-center text-foreground">
+        <div className="text-center">Loading...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center gap-y-6 bg-background p-4 text-center text-foreground">
       <div className="flex flex-col-reverse items-center justify-center gap-y-6 md:flex-row md:text-start">
@@ -43,15 +62,17 @@ export function NotFound404() {
         />
 
         <h1 className="inline-grid font-black text-6xl">
-          404 <span className="font-semibold text-3xl">Page Not Found</span>
+          {dictionary.errors.notFound.title}{' '}
+          <span className="font-semibold text-3xl">
+            {dictionary.errors.notFound.subtitle}
+          </span>
         </h1>
       </div>
       <p className="max-w-prose text-muted-foreground text-xl">
-        We couldn&apos;t find the page you&apos;re looking for. It might have
-        been moved or doesn&apos;t exist.
+        {dictionary.errors.notFound.description}
       </p>
       <Button size="lg" asChild>
-        <Link href="/">Home Page</Link>
+        <Link href="/">{dictionary.errors.notFound.homePage}</Link>
       </Button>
     </div>
   );

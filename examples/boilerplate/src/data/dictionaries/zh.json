@@ -134,8 +134,7 @@
     "language": {
       "language": "语言",
       "english": "英语",
-      "chinese": "中文",
-      "arabic": "阿拉伯语"
+      "chinese": "中文"
     },
     "mode": {
       "mode": "模式",
@@ -162,5 +161,39 @@
     "search": "搜索...",
     "noResults": "未找到结果。",
     "typeCommand": "输入命令或搜索..."
+  },
+  "errors": {
+    "globalError": {
+      "title": "糟糕！出现了一些问题",
+      "description": "我们为给您带来的不便深表歉意",
+      "errorTitle": "错误",
+      "defaultMessage": "发生了一个意外错误。请稍后再试。",
+      "tryAgain": "重试"
+    },
+    "notFound": {
+      "title": "404",
+      "subtitle": "页面未找到",
+      "description": "我们找不到您要查找的页面。它可能已被移动或不存在。",
+      "homePage": "首页"
+    }
+  },
+  "kanban": {
+    "accessibility": {
+      "moveColumn": "移动列",
+      "moveTask": "移动任务",
+      "addTask": "添加任务",
+      "editTask": "编辑任务",
+      "deleteTask": "删除任务",
+      "addColumn": "添加列",
+      "editColumn": "编辑列",
+      "deleteColumn": "删除列"
+    }
+  },
+  "footer": {
+    "designedBy": "设计开发：",
+    "appName": "Shadboard"
+  },
+  "landing": {
+    "ctaButton": "开始使用"
   }
 }

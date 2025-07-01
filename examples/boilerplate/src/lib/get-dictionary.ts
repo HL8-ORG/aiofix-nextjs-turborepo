@@ -16,8 +16,6 @@ const dictionaries = {
     import('@/data/dictionaries/en.json').then((module) => module.default),
   zh: () =>
     import('@/data/dictionaries/zh.json').then((module) => module.default),
-  ar: () =>
-    import('@/data/dictionaries/ar.json').then((module) => module.default),
 };
 
 /**

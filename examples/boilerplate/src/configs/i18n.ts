@@ -16,7 +16,7 @@ export const i18n = {
   /** 默认语言设置为英文 */
   defaultLocale: 'en',
   /** 支持的语言列表: 英文和阿拉伯文 */
-  locales: ['en', 'zh', 'ar'],
+  locales: ['en', 'zh'],
   /**
    * 语言的文字方向配置
    * en: 从左到右(LTR)
@@ -25,13 +25,13 @@ export const i18n = {
   localeDirection: {
     en: 'ltr',
     zh: 'ltr',
-    ar: 'rtl',
+    // ar: 'rtl',
   },
   /** 语言的显示名称映射 */
   localeNames: {
     en: 'english',
     zh: 'chinese',
-    ar: 'arabic',
+    // ar: 'arabic',
   },
 } as const;
 
