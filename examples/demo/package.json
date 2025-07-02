@@ -1,0 +1,37 @@
+{
+  "name": "demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@faker-js/faker": "^9.8.0",
+    "@repo/design-system": "workspace:*",
+    "lodash.groupby": "^4.6.0",
+    "lucide-react": "^0.518.0",
+    "next": "15.3.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-easy-crop": "^5.4.2",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "tunnel-rat": "^0.1.2"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@tailwindcss/postcss": "^4.1.7",
+    "@types/lodash.groupby": "^4.6.9",
+    "@types/node": "^22.15.21",
+    "@types/react": "19.1.5",
+    "@types/react-dom": "^19.1.6",
+    "tailwindcss": "^4.1.7",
+    "typescript": "^5.8.3"
+  }
+}

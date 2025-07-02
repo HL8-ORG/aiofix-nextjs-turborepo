@@ -34,6 +34,10 @@
       },
       "nursery": {
         "useSortedClasses": "off"
+      },
+      "correctness": {
+        "noUnusedFunctionParameters": "info",
+        "noUnusedVariables": "info"
       }
     }
   }
