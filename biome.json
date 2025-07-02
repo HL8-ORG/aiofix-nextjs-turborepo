@@ -18,12 +18,15 @@
     "rules": {
       "style": {
         "noNonNullAssertion": "off",
-        "useSelfClosingElements": "info"
+        "useSelfClosingElements": "info",
+        "useNumberNamespace": "info"
       },
       "suspicious": {
         "noConsoleLog": "off",
         "noConsole": "off",
-        "useAwait": "off"
+        "useAwait": "off",
+        "noGlobalIsNan": "off",
+        "noExplicitAny": "info"
       },
       "a11y": {
         "noSvgWithoutTitle": "off",

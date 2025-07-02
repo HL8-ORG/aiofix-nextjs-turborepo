@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate",
+  "name": "template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,25 +14,18 @@
     "@dnd-kit/utilities": "^3.2.2",
     "@faker-js/faker": "^9.8.0",
     "@repo/design-system": "workspace:*",
-    "clsx": "^2.1.1",
-    "js-cookie": "^3.0.5",
     "lucide-react": "^0.518.0",
     "motion": "^12.19.2",
     "next": "15.3.4",
-    "next-intl": "^4.3.3",
-    "next-themes": "^0.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.1",
-    "tailwind-merge": "^3.3.1",
-    "tunnel-rat": "^0.1.2",
-    "zustand": "^5.0.6"
+    "tunnel-rat": "^0.1.2"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "^4.1.7",
-    "@types/js-cookie": "^3.0.6",
     "@types/node": "^22.15.21",
     "@types/react": "19.1.5",
     "@types/react-dom": "^19.1.6",
